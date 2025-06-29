@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>B11356023鄭惠心-JS期末專題報告</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+
+    <style>
+        #homeContent h4 {
+            background-color: #ffb6c1; 
+            color: #5a2a38;
+            padding: 8px 16px;
+            border-radius: 0.5rem;
+            display: inline-block;
+        }
+
+        #homeContent ul.list-group {
+            background-color: #ffe6f0; 
+            border-radius: 0.5rem;
+            padding: 1rem;
+        }
+
+        #homeContent ul.list-group li.list-group-item {
+            background-color: transparent; 
+            border: none;
+            padding-left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Cammy</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navCollapse" aria-controls="navCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navCollapse">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#" id="homeLink">首頁</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="featureLink">功能</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="aboutLink">關於我</a></li> <!-- 新增 -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="d-lg-none p-3">
+        <ul class="list-group">
+            <li class="list-group-item content-item">專案名稱：個人學習與生活小幫手</li>
+            <li class="list-group-item content-item">內容說明：整合待辦、學習筆記、天氣資訊等功能</li>
+            <li class="list-group-item content-item">使用技術：HTML、CSS、Bootstrap 5</li>
+        </ul>
+    </div>
+
+    <main class="container mt-4">
+        <section id="homeContent" style="display:none;">
+            <h4 class="text-primary">今日目標</h4>
+            <img src="JS圖1.jpg" alt="JS專題圖1" class="img-fluid my-3" />
+            <ul class="list-group mb-4">
+                <li class="list-group-item">完成期末專題 PPT</li>
+                <li class="list-group-item">日文單字 20 個</li>
+                <li class="list-group-item">練 C 語言</li>
+            </ul>
+
+            <div class="row g-0 border rounded overflow-hidden">
+                <div class="col-md-6 border-end d-none d-lg-block">
+                    <section class="p-4 bg-primary bg-opacity-10 w-100">
+                        <h5>個人工具區</h5>
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button">待辦清單</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button">每日雞湯</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab3" type="button">今日天氣資訊</button>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content mt-3">
+                            <div class="tab-pane fade show active" id="tab1" role="tabpanel">
+                                <p>1.完成期末專題</p>
+                                <p>2.念商用通訊8-15章</p>
+                                <p>3.念日文2-4課</p>
+                            </div>
+                            <div class="tab-pane fade" id="tab2" role="tabpanel">
+                                <p>再困難也別放棄</p>
+                            </div>
+                            <div class="tab-pane fade" id="tab3" role="tabpanel">
+                                <p>今天：多雲時陰 29°C，體感溫度31°C，建議穿短袖</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="col-md-6 d-none d-lg-block">
+                    <section class="p-4 bg-success bg-opacity-10 w-100">
+                        <h5>學習專區</h5>
+                        <ul class="nav nav-tabs" id="myTabB" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="tabB1-tab" data-bs-toggle="tab" data-bs-target="#tabB1" type="button">最近學習專區</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="tabB2-tab" data-bs-toggle="tab" data-bs-target="#tabB2" type="button">迷你筆記</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="tabB3-tab" data-bs-toggle="tab" data-bs-target="#tabB3" type="button">考試時間</button>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content mt-3">
+                            <div class="tab-pane fade show active" id="tabB1" role="tabpanel">
+                                <p>1.HTML/CSS基礎</p>
+                                <p>2.JavaScript入門</p>
+                                <p>3.日文50音</p>
+                            </div>
+                            <div class="tab-pane fade" id="tabB2" role="tabpanel">
+                                <p>HTML：標籤要正確閉合</p>
+                            </div>
+                            <div class="tab-pane fade" id="tabB3" role="tabpanel">
+                                <p>6/16-6/20期末週</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <section id="featureContent" style="display:none;">
+            <h4 class="text-success">今日必須做的事</h4>
+            <p>洗衣服、練C語言</p>
+            <img src="JS圖2.jpg" alt="JS專題圖2" class="img-fluid mt-3" />
+            <!-- 在這裡也加一張圖片 -->
+            <img src="JS圖3.jpg" alt="JS專題圖3" class="img-fluid mt-3" />
+        </section>
+
+        <section id="aboutContent" style="display:none;">
+            <h4 class="text-info">個人簡介</h4>
+            <img src="JS圖4.jpg" alt="JS專題圖4" class="img-fluid my-3" />
+            <p>大家好,我是鄭惠心,是目前就讀屏科大資訊管理系的一年級生,目前正在學習Javascript,努力學習新知識。</p>
+            <p>興趣包括畫畫、寫程式和吃美食。</p>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <script>
+        const homeLink = document.getElementById('homeLink');
+        const featureLink = document.getElementById('featureLink');
+        const aboutLink = document.getElementById('aboutLink'); 
+
+        const homeContent = document.getElementById('homeContent');
+        const featureContent = document.getElementById('featureContent');
+        const aboutContent = document.getElementById('aboutContent'); 
+
+        homeContent.style.display = 'block';
+        featureContent.style.display = 'none';
+        aboutContent.style.display = 'none';
+
+        homeLink.addEventListener('click', function (event) {
+            event.preventDefault();
+            homeContent.style.display = 'block';
+            featureContent.style.display = 'none';
+            aboutContent.style.display = 'none';
+        });
+
+        featureLink.addEventListener('click', function (event) {
+            event.preventDefault();
+            homeContent.style.display = 'none';
+            featureContent.style.display = 'block';
+            aboutContent.style.display = 'none';
+        });
+
+        aboutLink.addEventListener('click', function (event) {
+            event.preventDefault();
+            homeContent.style.display = 'none';
+            featureContent.style.display = 'none';
+            aboutContent.style.display = 'block';
+        });
+    </script>
+</body>
+
+</html>
